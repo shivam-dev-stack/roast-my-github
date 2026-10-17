@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💀 AI Roast My GitHub
 
-## Getting Started
+**Your GitHub profile looks impressive. Until AI takes a closer look.**
 
-First, run the development server:
+AI Roast My GitHub is a fun, AI-powered tool that analyzes your public GitHub profile and roasts your developer habits, repositories, and coding persona. Get your developer type, a roast score, and brutally funny verdicts — then share the damage with the world.
+
+## ✨ Features
+
+- 🔍 **GitHub Profile Analysis** — Fetches public GitHub profile data.
+- 🤖 **AI-Powered Roasts** — Generates personalized, humorous roasts using Google's Gemini.
+- 🎭 **Developer Type** — Discover your unique developer persona.
+- 💯 **Roast Score** — Get a comedic score out of 100.
+- 💀 **Final Verdict** — Receive your final AI-generated judgment.
+- 📸 **Shareable Roast Card** — Download your roast as a PNG image.
+- 𝕏 **Share on X** — Share your results and challenge other developers.
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js
+- **Language:** TypeScript
+- **UI:** React + Tailwind CSS
+- **AI:** Google Gemini API (`@google/genai`)
+- **API Integration:** GitHub REST API
+- **Validation:** Zod
+- **Image Export:** `html-to-image`
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+- A Google Gemini API key
+- Git
+
+### 1. Clone the repository
+
+```bash
+git clone <YOUR_REPOSITORY_URL>
+cd <YOUR_PROJECT_DIRECTORY>
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a `.env.local` file in the project root:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+GEMINI_MODEL=your_supported_gemini_model
+```
+
+Use a Gemini model currently available to your API key and account quota. Keep your API key private and never expose it in client-side code or commit it to Git.
+
+### 4. Start the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 How It Works
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Enter a GitHub username.
+2. The app retrieves public profile information from GitHub.
+3. The backend prepares the profile data for AI analysis.
+4. Gemini generates a developer type, roast score, roasts, and final verdict.
+5. View your results, download your roast card, and share it on X.
 
-## Learn More
+## 📁 Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+app/
+├── api/
+│   ├── github/
+│   │   └── [username]/
+│   │       └── route.ts
+│   └── roast/
+│       └── [username]/
+│           └── route.ts
+├── page.tsx
+└── ...
+lib/
+├── github.ts
+└── roast.ts
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+*Note: The structure above reflects the intended API and library organization. Adjust it to match your actual repository.*
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔐 Privacy & Limitations
 
-## Deploy on Vercel
+- The app analyzes public GitHub information.
+- The roast score is for entertainment, not a genuine measure of code quality or developer skill.
+- AI-generated content can be inaccurate, exaggerated, or inconsistent.
+- API availability and rate limits may affect results.
+- Never expose API keys or other secrets in the browser.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🗺️ Roadmap
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [ ] Improve GitHub repository analysis.
+- [ ] Add more developer personas and roast styles.
+- [ ] Improve roast card design and social sharing.
+- [ ] Add caching and API rate limiting.
+- [ ] Explore repository-specific analysis.
+
+## 🤝 Contributing
+
+Contributions, suggestions, and creative roast ideas are welcome!
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Open a pull request.
+
+## 📄 License
+
+Add a license before distributing or accepting contributions. If you choose MIT, include the appropriate MIT License text in a `LICENSE` file.
+
+---
+
+**Think your GitHub is roast-proof? Prove it.** 💀🔥
+
+Built for developers who can handle the truth.
